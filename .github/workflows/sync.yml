@@ -30,7 +30,7 @@ jobs:
 
       - name: Push to Other Developers
         run: |
-          for repo in https://github.com/SerdiukVladyslav/TestVlad; do
+          for repo in git@github.com:SerdiukVladyslav/TestVlad.git; do
             git remote add peer $repo || true
             git fetch peer
             git push peer main
