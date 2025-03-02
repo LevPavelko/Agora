@@ -26,5 +26,5 @@ jobs:
           for repo in git@github.com:SerdiukVladyslav/TestVlad.git; do
             git remote add peer $repo || true
             git fetch peer
-            git push peer TestMaster
+            git push peer master:main
           done
