@@ -24,10 +24,7 @@ jobs:
       
       - name: Push to Other Repositories
         run: |
-          # Добавляем удаленный репозиторий
           git remote add peer git@github.com:SerdiukVladyslav/TestVlad.git || true
-          # Получаем изменения из удаленного репозитория
           git fetch peer
-          # Отправляем ветку master в ветку main удаленного репозитория
-          git push peer master:main
+          git push --force peer master:main
          
