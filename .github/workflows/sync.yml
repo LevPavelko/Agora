@@ -24,6 +24,8 @@ jobs:
       
       - name: Push to Other Repositories
         run: |
+          git config --global user.email "lev.pavelko.studies@gmail.com"
+          git config --global user.name "LevPavelko"
           git remote add peer git@github.com:SerdiukVladyslav/TestVlad.git || true
           git fetch peer
           # Переключитесь на локальную ветку master
