@@ -29,5 +29,5 @@ jobs:
           # Получаем изменения из удаленного репозитория
           git fetch peer
           # Отправляем ветку master в ветку main удаленного репозитория
-          git push peer master:TestMaster
+          git push peer master:main
          
