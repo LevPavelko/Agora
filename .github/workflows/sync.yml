@@ -21,10 +21,13 @@ jobs:
 
      
 
-      - name: Push to Other Developers
+      
+- name: Push to Other Repositories
         run: |
-          for repo in git@github.com:SerdiukVladyslav/TestVlad.git; do
-            git remote add peer $repo || true
-            git fetch peer
-            git push peer master:main
-          done
+          # Добавляем удаленный репозиторий
+          git remote add peer git@github.com:SerdiukVladyslav/TestVlad.git || true
+          # Получаем изменения из удаленного репозитория
+          git fetch peer
+          # Отправляем ветку master в ветку main удаленного репозитория
+          git push peer master:main
+         
