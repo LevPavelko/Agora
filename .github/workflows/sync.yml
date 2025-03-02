@@ -3,9 +3,8 @@ name: Sync with Other Repos
 on:
   push:
     branches:
-      - Front-end
-      - Backend
-
+      - master
+     
 jobs:
   sync:
     runs-on: ubuntu-latest
