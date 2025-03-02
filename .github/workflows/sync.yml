@@ -26,5 +26,10 @@ jobs:
         run: |
           git remote add peer git@github.com:SerdiukVladyslav/TestVlad.git || true
           git fetch peer
-          git push --force peer master:main
+          # Переключитесь на локальную ветку master
+          git checkout master
+          # Слияние изменений из удаленной ветки main
+          git pull peer main --rebase
+          # Отправка изменений в удаленную ветку main
+          git push peer master:main
          
