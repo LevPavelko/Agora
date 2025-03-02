@@ -19,11 +19,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Push to Main Repository
-        run: |
-          git remote add upstream git@github.com:agorastore2025/Agora.git
-          git fetch upstream
-          git push upstream main
+     
 
       - name: Push to Other Developers
         run: |
